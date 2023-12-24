@@ -31,7 +31,8 @@ export default class Youtube {
                         part:'snippet',
                         maxResults: 25,
                         type:'video',
-                        q: keyword
+                        q: keyword,
+                        regionCode:'ISO 3166-2:KR',
                     }
                 })
             .then((res) => 
@@ -45,6 +46,7 @@ export default class Youtube {
                 part:'snippet',
                 maxResults: 25,
                 chart: 'mostPopular',
+                regionCode:'ISO 3166-2:KR',
                 },
             })
             .then((res) => res.data.items)
